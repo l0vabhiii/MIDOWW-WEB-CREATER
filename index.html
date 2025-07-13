@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Midow Web Creater | OG Portfolio</title>
+  <title>MidowWeb Creater | OG Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -26,10 +26,11 @@
 </head>
 <body class="bg-gray-900 text-white font-sans">
 
-<!-- Navbar -->
 <header class="fixed w-full z-50 bg-gray-900 bg-opacity-80 shadow-md">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <h1 class="text-2xl font-bold text-indigo-400">MidowWeb</h1>
+    <a href="#home">
+      <img src="assets/logo.png" alt="MidowWeb Logo" class="h-10">
+    </a>
     <nav class="space-x-4 text-sm hidden md:block">
       <a href="#home" class="hover:text-indigo-400">Home</a>
       <a href="#about" class="hover:text-indigo-400">About</a>
@@ -42,7 +43,6 @@
   </div>
 </header>
 
-<!-- Hero Section -->
 <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-br from-indigo-900 to-black px-4 pt-24">
   <div data-aos="fade-up">
     <h1 class="text-4xl md:text-6xl font-extrabold mb-4">MidowWeb Creater</h1>
@@ -50,63 +50,52 @@
     <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-6 rounded-full text-lg transition mt-4">Let's Work Together</a>
   </div>
 </section>
-<!-- Video Section -->
+
 <section class="py-10 bg-black">
   <div class="max-w-5xl mx-auto px-4" data-aos="zoom-in">
     <video autoplay loop muted class="rounded-xl w-full shadow-lg">
       <source src="assets/video.mp4" type="video/mp4">
-      Your browser does not support HTML video.
     </video>
   </div>
 </section>
 
-<!-- About Me -->
 <section id="about" class="py-20 bg-gray-800 px-6" data-aos="fade-up">
   <div class="max-w-5xl mx-auto text-center">
     <h2 class="text-3xl font-bold mb-6 text-indigo-400">About Me</h2>
     <p class="text-gray-300 max-w-3xl mx-auto">I'm a full stack developer and graphic designer. I build modern sites, posters, portfolios and help people grow online presence.</p>
   </div>
 </section>
-<!-- Why Choose Me Section -->
-<section class="py-20 bg-gray-800 px-6" data-aos="fade-up">
+<section id="benefits" class="py-20 bg-gray-800 px-6" data-aos="fade-up">
   <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-6 text-indigo-400">Why Choose Me?</h2>
-    <div class="grid md:grid-cols-3 gap-6 text-left text-gray-300">
-
-      <div class="bg-gray-700 p-6 rounded-xl">
-        <h3 class="text-xl font-semibold text-white mb-2">🚀 Fast Delivery</h3>
-        <p>Projects delivered quickly without compromising quality. Perfect for urgent launches.</p>
+    <h2 class="text-3xl font-bold mb-10 text-indigo-400">Why Choose Me?</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
+        <h3 class="text-xl font-semibold text-white mb-2">✅ All-in-One Expert</h3>
+        <p class="text-gray-400">From websites to posters to branding — I handle it all professionally.</p>
       </div>
-
-      <div class="bg-gray-700 p-6 rounded-xl">
+      <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
+        <h3 class="text-xl font-semibold text-white mb-2">🚀 Fast & Modern Work</h3>
+        <p class="text-gray-400">Super responsive designs, clean UI/UX, and fast delivery every time.</p>
+      </div>
+      <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
+        <h3 class="text-xl font-semibold text-white mb-2">💼 Portfolio Services</h3>
+        <p class="text-gray-400">Need your own portfolio? I build ready-to-upload GitHub or hosting-friendly code.</p>
+      </div>
+      <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
         <h3 class="text-xl font-semibold text-white mb-2">🎯 Custom Designs</h3>
-        <p>Every site, every poster is custom made — no boring templates. Tailored to your brand.</p>
+        <p class="text-gray-400">Every client gets unique look and feel — zero copy paste work.</p>
       </div>
-
-      <div class="bg-gray-700 p-6 rounded-xl">
-        <h3 class="text-xl font-semibold text-white mb-2">💼 Full Stack Support</h3>
-        <p>From frontend UI to backend panels and hosting — everything in one place.</p>
+      <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
+        <h3 class="text-xl font-semibold text-white mb-2">📱 WhatsApp Support</h3>
+        <p class="text-gray-400">Direct support anytime on WhatsApp — no delays.</p>
       </div>
-
-      <div class="bg-gray-700 p-6 rounded-xl">
-        <h3 class="text-xl font-semibold text-white mb-2">📱 Mobile Friendly</h3>
-        <p>All designs are fully responsive. Looks perfect on phones, tablets, and desktops.</p>
+      <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
+        <h3 class="text-xl font-semibold text-white mb-2">🔥 High Graphics</h3>
+        <p class="text-gray-400">HD visuals, animated sliders, pro-level finish that attracts clients instantly.</p>
       </div>
-
-      <div class="bg-gray-700 p-6 rounded-xl">
-        <h3 class="text-xl font-semibold text-white mb-2">🔒 Reliable Code</h3>
-        <p>Clean and scalable code using HTML, Tailwind, Firebase, and modern stacks.</p>
-      </div>
-
-      <div class="bg-gray-700 p-6 rounded-xl">
-        <h3 class="text-xl font-semibold text-white mb-2">💬 24x7 Support</h3>
-        <p>Got changes or need help later? I stay available on WhatsApp even after delivery.</p>
-      </div>
-
     </div>
   </div>
 </section>
-<!-- Services -->
 <section id="services" class="py-20 bg-gray-900 px-6" data-aos="fade-up">
   <div class="max-w-6xl mx-auto text-center">
     <h2 class="text-3xl font-bold mb-10 text-indigo-400">Services</h2>
@@ -126,33 +115,19 @@
     </div>
   </div>
 </section>
-<!-- Poster Gallery -->
+
 <section id="posters" class="py-20 bg-gray-800 px-6" data-aos="fade-up">
   <div class="max-w-6xl mx-auto text-center">
     <h2 class="text-3xl font-bold mb-10 text-indigo-400">Posters & Graphics</h2>
     <div class="grid md:grid-cols-3 gap-6" id="poster-grid">
-
-      <!-- Manually add unlimited poster blocks below -->
       <div class="bg-gray-700 p-2 rounded-xl overflow-hidden">
-        <img src="assets/posters/design1.jpg" class="rounded-xl" alt="Poster 1">
-        <p class="text-gray-300 mt-2">Event Promo</p>
+        <img src="assets/posters/midowweb_poster_1.png" class="rounded-xl" alt="MidowWeb Poster">
+        <p class="text-gray-300 mt-2">Freelance Services</p>
       </div>
-
-      <div class="bg-gray-700 p-2 rounded-xl overflow-hidden">
-        <img src="assets/posters/design2.jpg" class="rounded-xl" alt="Poster 2">
-        <p class="text-gray-300 mt-2">Brand Identity</p>
-      </div>
-
-      <div class="bg-gray-700 p-2 rounded-xl overflow-hidden">
-        <img src="assets/posters/design3.jpg" class="rounded-xl" alt="Poster 3">
-        <p class="text-gray-300 mt-2">Social Banner</p>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- Projects Section -->
 <section id="projects" class="py-20 bg-gray-900 px-6" data-aos="fade-up">
   <div class="max-w-6xl mx-auto text-center">
     <h2 class="text-3xl font-bold mb-10 text-indigo-400">Projects</h2>
@@ -173,33 +148,28 @@
   </div>
 </section>
 
-<!-- Testimonials Slider -->
 <section id="testimonials" class="py-20 bg-gray-800 px-6" data-aos="fade-up">
   <div class="max-w-4xl mx-auto text-center">
     <h2 class="text-3xl font-bold mb-10 text-indigo-400">Testimonials</h2>
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
-
         <div class="swiper-slide bg-gray-700 p-6 rounded-xl text-white shadow">
           <p class="italic">"MidowWeb built our site faster than we expected and with stunning results."</p>
           <p class="text-sm mt-2 text-indigo-300">— Priya S, Startup Founder</p>
         </div>
-
         <div class="swiper-slide bg-gray-700 p-6 rounded-xl text-white shadow">
           <p class="italic">"Great graphic designs and amazing responsiveness. Highly recommend."</p>
           <p class="text-sm mt-2 text-indigo-300">— Aman T, Digital Creator</p>
         </div>
-
         <div class="swiper-slide bg-gray-700 p-6 rounded-xl text-white shadow">
           <p class="italic">"My personal portfolio looks 🔥 now thanks to this guy."</p>
           <p class="text-sm mt-2 text-indigo-300">— Rahul K, Freelancer</p>
         </div>
-
       </div>
     </div>
   </div>
 </section>
-<!-- Contact Section -->
+
 <section id="contact" class="py-20 bg-gray-900 px-6" data-aos="fade-up">
   <div class="max-w-xl mx-auto text-center">
     <h2 class="text-3xl font-bold mb-4 text-indigo-400">Contact Me</h2>
@@ -208,55 +178,34 @@
   </div>
 </section>
 
-<!-- Footer -->
 <footer class="text-center py-6 bg-black text-gray-500">
   © 2025 MidowWeb Creater. Built with ❤️ using Tailwind CSS & Swiper.js
 </footer>
 
-<!-- Scripts -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init();</script>
-
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script>
   var swiper = new Swiper(".mySwiper", {
     loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
+    autoplay: { delay: 3000, disableOnInteraction: false },
     slidesPerView: 1,
     spaceBetween: 20,
-    breakpoints: {
-      768: {
-        slidesPerView: 1,
-      },
-    },
+    breakpoints: { 768: { slidesPerView: 1 } }
   });
 </script>
-
 <script>
   const roles = ["Web Developer", "Graphic Designer", "UI/UX Expert", "Portfolio Builder"];
   let i = 0, j = 0, current = '', isDeleting = false;
   const el = document.getElementById("typing-text");
   function type() {
     if (!el) return;
-    if (isDeleting) {
-      current = roles[i].substring(0, j--);
-    } else {
-      current = roles[i].substring(0, j++);
-    }
+    if (isDeleting) current = roles[i].substring(0, j--);
+    else current = roles[i].substring(0, j++);
     el.textContent = current;
-    if (!isDeleting && j === roles[i].length) {
-      isDeleting = true;
-      setTimeout(type, 1200);
-    } else if (isDeleting && j === 0) {
-      isDeleting = false;
-      i = (i + 1) % roles.length;
-      setTimeout(type, 200);
-    } else {
-      setTimeout(type, isDeleting ? 50 : 100);
-    }
+    if (!isDeleting && j === roles[i].length) { isDeleting = true; setTimeout(type, 1200); }
+    else if (isDeleting && j === 0) { isDeleting = false; i = (i + 1) % roles.length; setTimeout(type, 200); }
+    else setTimeout(type, isDeleting ? 50 : 100);
   }
   type();
 </script>
