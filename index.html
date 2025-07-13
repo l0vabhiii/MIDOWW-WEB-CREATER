@@ -6,6 +6,7 @@
   <title>MidowWeb Creater | OG Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <style>
     html { scroll-behavior: smooth; }
     .glass {
@@ -35,12 +36,13 @@
       <a href="#services" class="hover:text-indigo-400">Services</a>
       <a href="#projects" class="hover:text-indigo-400">Projects</a>
       <a href="#posters" class="hover:text-indigo-400">Posters</a>
+      <a href="#testimonials" class="hover:text-indigo-400">Testimonials</a>
       <a href="#contact" class="hover:text-indigo-400">Contact</a>
     </nav>
   </div>
 </header>
 
-<!-- Hero -->
+<!-- Hero Section -->
 <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-br from-indigo-900 to-black px-4 pt-24">
   <div data-aos="fade-up">
     <h1 class="text-4xl md:text-6xl font-extrabold mb-4">MidowWeb Creater</h1>
@@ -52,7 +54,7 @@
 <section class="py-10 bg-black">
   <div class="max-w-5xl mx-auto px-4" data-aos="zoom-in">
     <video autoplay loop muted class="rounded-xl w-full shadow-lg">
-      <source src="https://cdn.pixabay.com/vimeo/258436751/graphic-101785.mp4?width=640&hash=ef6d63a38eaa8c95" type="video/mp4">
+      <source src="https://cdn.videvo.net/videvo_files/video/free/2014-07/large_watermarked/Colorful_Shapes_Background_01_preview.mp4" type="video/mp4">
       Your browser does not support HTML video.
     </video>
   </div>
@@ -62,9 +64,7 @@
 <section id="about" class="py-20 bg-gray-800 px-6" data-aos="fade-up">
   <div class="max-w-5xl mx-auto text-center">
     <h2 class="text-3xl font-bold mb-6 text-indigo-400">About Me</h2>
-    <p class="text-gray-300 max-w-3xl mx-auto">
-      I'm a self-made full stack web developer and graphic designer. I create fast, responsive websites and professional designs for businesses, influencers, and creators. Passionate about clean code, brand visuals, and delivering real results.
-    </p>
+    <p class="text-gray-300 max-w-3xl mx-auto">I'm a full stack developer and graphic designer. I build modern sites, posters, portfolios and help people grow online presence.</p>
   </div>
 </section>
 
@@ -74,89 +74,148 @@
     <h2 class="text-3xl font-bold mb-10 text-indigo-400">Services</h2>
     <div class="grid md:grid-cols-3 gap-8">
       <div class="glass p-6 rounded-xl">
-        <h3 class="text-xl font-semibold mb-2">Full Stack Web Development</h3>
-        <p class="text-gray-400">Modern websites using HTML, Tailwind, Firebase, and more.</p>
+        <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+        <p class="text-gray-400">Clean, fast, responsive websites with modern UI/UX</p>
       </div>
       <div class="glass p-6 rounded-xl">
         <h3 class="text-xl font-semibold mb-2">Graphic Design</h3>
-        <p class="text-gray-400">Posters, Logos, Thumbnails, Insta Banners — all pro quality.</p>
+        <p class="text-gray-400">Banners, Posters, Insta Posts, Branding Designs</p>
       </div>
       <div class="glass p-6 rounded-xl">
-        <h3 class="text-xl font-semibold mb-2">Portfolio Creation</h3>
-        <p class="text-gray-400">I build portfolios for devs, freelancers, creators & students.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Projects -->
-<section id="projects" class="py-20 bg-gray-800 px-6" data-aos="fade-up">
-  <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-10 text-indigo-400">Projects</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-gray-700 p-4 rounded-xl">
-        <h4 class="text-lg font-semibold">GAD Capital</h4>
-        <p class="text-sm text-gray-300">Investment Platform with Firebase backend</p>
-      </div>
-      <div class="bg-gray-700 p-4 rounded-xl">
-        <h4 class="text-lg font-semibold">99,49 Store</h4>
-        <p class="text-sm text-gray-300">Flipkart-style Ecommerce for budget products</p>
-      </div>
-      <div class="bg-gray-700 p-4 rounded-xl">
-        <h4 class="text-lg font-semibold">Freelance Portal</h4>
-        <p class="text-sm text-gray-300">Job board + Admin Panel UI</p>
+        <h3 class="text-xl font-semibold mb-2">Portfolio Services</h3>
+        <p class="text-gray-400">Custom portfolios for creators, freelancers & devs</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Posters Gallery -->
-<section id="posters" class="py-20 bg-gray-900 px-6" data-aos="fade-up">
+<!-- Posters (Unlimited Addable) -->
+<section id="posters" class="py-20 bg-gray-800 px-6" data-aos="fade-up">
   <div class="max-w-6xl mx-auto text-center">
     <h2 class="text-3xl font-bold mb-10 text-indigo-400">Posters & Graphics</h2>
-    <div class="grid md:grid-cols-3 gap-6">
+    <div class="grid md:grid-cols-3 gap-6" id="poster-grid">
+
+      <!-- Copy & Paste these blocks to add more posters -->
       <div class="bg-gray-700 p-2 rounded-xl overflow-hidden">
         <img src="https://cdn.pixabay.com/photo/2022/01/03/10/51/poster-design-6911887_960_720.jpg" class="rounded-xl" alt="Poster 1">
-        <p class="text-gray-300 mt-2">Event Promo Poster</p>
+        <p class="text-gray-300 mt-2">Event Promo</p>
       </div>
+
       <div class="bg-gray-700 p-2 rounded-xl overflow-hidden">
         <img src="https://cdn.pixabay.com/photo/2021/12/12/11/20/graphic-design-6864876_960_720.jpg" class="rounded-xl" alt="Poster 2">
-        <p class="text-gray-300 mt-2">Brand Identity Design</p>
+        <p class="text-gray-300 mt-2">Brand Identity</p>
       </div>
+
       <div class="bg-gray-700 p-2 rounded-xl overflow-hidden">
         <img src="https://cdn.pixabay.com/photo/2020/10/27/19/36/marketing-5690877_960_720.jpg" class="rounded-xl" alt="Poster 3">
-        <p class="text-gray-300 mt-2">Social Media Banner</p>
+        <p class="text-gray-300 mt-2">Social Banner</p>
+      </div>
+
+      <!-- Add more posters below like this 👇 -->
+      <!--
+      <div class="bg-gray-700 p-2 rounded-xl overflow-hidden">
+        <img src="YOUR_IMAGE_URL_HERE" class="rounded-xl" alt="Poster">
+        <p class="text-gray-300 mt-2">Your Caption</p>
+      </div>
+      -->
+
+    </div>
+  </div>
+</section>
+<!-- Projects -->
+<section id="projects" class="py-20 bg-gray-900 px-6" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-10 text-indigo-400">Projects</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-gray-800 p-4 rounded-xl">
+        <h4 class="text-lg font-semibold">GAD Capital</h4>
+        <p class="text-sm text-gray-300">Investor-focused Firebase platform</p>
+      </div>
+      <div class="bg-gray-800 p-4 rounded-xl">
+        <h4 class="text-lg font-semibold">99,49 Store</h4>
+        <p class="text-sm text-gray-300">Low-price eCommerce frontend + backend</p>
+      </div>
+      <div class="bg-gray-800 p-4 rounded-xl">
+        <h4 class="text-lg font-semibold">Freelance Job Panel</h4>
+        <p class="text-sm text-gray-300">Role-based job & dashboard management</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Slider -->
+<section id="testimonials" class="py-20 bg-gray-800 px-6" data-aos="fade-up">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-10 text-indigo-400">Testimonials</h2>
+
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide bg-gray-700 p-6 rounded-xl text-white shadow">
+          <p class="italic">"MidowWeb built our site faster than we expected and with stunning results."</p>
+          <p class="text-sm mt-2 text-indigo-300">— Priya S, Startup Founder</p>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide bg-gray-700 p-6 rounded-xl text-white shadow">
+          <p class="italic">"Great graphic designs and amazing responsiveness. Highly recommend."</p>
+          <p class="text-sm mt-2 text-indigo-300">— Aman T, Digital Creator</p>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide bg-gray-700 p-6 rounded-xl text-white shadow">
+          <p class="italic">"My personal portfolio looks 🔥 now thanks to this guy."</p>
+          <p class="text-sm mt-2 text-indigo-300">— Rahul K, Freelancer</p>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
 
 <!-- Contact -->
-<section id="contact" class="py-20 bg-gray-800 px-6" data-aos="fade-up">
+<section id="contact" class="py-20 bg-gray-900 px-6" data-aos="fade-up">
   <div class="max-w-xl mx-auto text-center">
     <h2 class="text-3xl font-bold mb-4 text-indigo-400">Contact Me</h2>
-    <p class="text-gray-300 mb-6">Want a portfolio like this? Need a custom site or design? Let’s talk.</p>
+    <p class="text-gray-300 mb-6">Need a portfolio or custom project? Let's connect.</p>
     <a href="https://wa.me/918793727113" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full transition">Message Me on WhatsApp</a>
   </div>
 </section>
 
 <!-- Footer -->
 <footer class="text-center py-6 bg-black text-gray-500">
-  © 2025 MidowWeb Creater. Built with ❤️ and Tailwind CSS.
-</footer>
-<!-- Scripts -->
+  © 2025 MidowWeb Creater. Built with ❤️ using Tailwind CSS & Swiper.js
+          </footer>
+          <!-- AOS Animation -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init();</script>
 
+<!-- SwiperJS for Testimonials -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script>
-  const roles = [
-    "Web Developer",
-    "Graphic Designer",
-    "UI/UX Expert",
-    "Portfolio Builder"
-  ];
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+      },
+    },
+  });
+</script>
+
+<!-- Typing Animation -->
+<script>
+  const roles = ["Web Developer", "Graphic Designer", "UI/UX Expert", "Portfolio Builder"];
   let i = 0, j = 0, current = '', isDeleting = false;
   const el = document.getElementById("typing-text");
-
   function type() {
     if (!el) return;
     if (isDeleting) {
@@ -176,7 +235,6 @@
       setTimeout(type, isDeleting ? 50 : 100);
     }
   }
-
   type();
 </script>
 
