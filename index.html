@@ -1,52 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MidowWeb Creater</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     html { scroll-behavior: smooth; }
-    .fadeInUp { animation: fadeInUp 1.2s ease-in-out; }
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
+    body { font-family: 'Inter', sans-serif; cursor: url('https://cdn-icons-png.flaticon.com/512/25/25694.png'), auto; }
+    a:hover { transform: scale(1.03); transition: 0.3s; }
   </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
-
-<!-- Header -->
-<header class="fixed w-full top-0 z-50 bg-gray-900 bg-opacity-90 shadow-lg">
+<body class="bg-gray-900 text-white font-sans"><!-- Floating WhatsApp --><a href="https://wa.me/918793727113" target="_blank" class="fixed bottom-4 right-4 bg-green-500 p-3 rounded-full shadow-lg z-50">
+  <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" class="w-6 h-6" />
+</a><!-- Header --><header class="fixed w-full top-0 z-50 bg-gray-900 bg-opacity-90 shadow-lg">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <img src="assets/logo.png" alt="Logo" class="h-10">
+    <img src="logo.png" alt="Logo" class="h-10">
     <h1 class="text-xl font-bold text-indigo-400">MidowWeb Creater</h1>
   </div>
-</header>
-
-<!-- Hero Section -->
-<section class="pt-28 pb-10 text-center">
-  <h2 class="text-4xl font-extrabold mb-4 fadeInUp">Build Your Dream Portfolio</h2>
-  <p class="text-lg text-gray-300 fadeInUp">Web Design | Posters | Full Stack Development</p>
-  <a href="#contact" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full transition fadeInUp">
+</header><!-- Hero Section --><section class="pt-28 pb-10 text-center" data-aos="fade-up">
+  <h2 class="text-4xl font-extrabold mb-4">Build Your Dream Portfolio</h2>
+  <p class="text-lg text-gray-300">Web Design | Posters | Full Stack Development</p>
+  <a href="#contact" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full transition">
     Contact Now
   </a>
-</section>
-
-<!-- Video Section -->
-<section class="px-4 py-10 fadeInUp">
+</section><!-- Video Section --><section class="px-4 py-10" data-aos="fade-up">
   <div class="max-w-5xl mx-auto">
     <video autoplay loop muted playsinline class="w-full rounded-xl shadow-2xl">
-      <source src="assets/promo-video.mp4" type="video/mp4">
+      <source src="promo-video.mp4" type="video/mp4">
       Your browser does not support video playback.
     </video>
   </div>
-</section>
-
-<!-- Benefits Section -->
-<section class="py-16 bg-gray-800 px-4 text-center fadeInUp">
+</section><!-- Live Counter --><section class="text-center my-10" data-aos="fade-up">
+  <h2 class="text-3xl font-bold text-indigo-400">📊 Projects Delivered</h2>
+  <p class="text-6xl font-extrabold mt-4" id="counter">0+</p>
+</section><!-- Benefits Section --><section class="py-16 bg-gray-800 px-4 text-center" data-aos="fade-up">
   <h2 class="text-3xl font-bold text-indigo-400 mb-6">Why Choose Me?</h2>
   <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
     <div class="bg-gray-900 p-6 rounded-xl">
@@ -62,26 +52,36 @@
       <p class="text-gray-400">Websites with backend integration possible</p>
     </div>
   </div>
-</section>
-
-<!-- Poster Gallery (Zoomable) -->
-<section class="py-20 bg-gray-900 text-center">
+</section><!-- My Projects --><section class="py-20 bg-gray-900 text-center" data-aos="fade-up">
+  <h2 class="text-3xl font-bold text-indigo-400 mb-10">💼 My Recent Projects</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
+    <div class="bg-gray-800 p-6 rounded-xl shadow-md">
+      <h3 class="text-white font-bold mb-2">99,49 Store</h3>
+      <p class="text-gray-400 text-sm">E-commerce UI with product filters, dynamic backend, and ₹49-₹149 listing layout.</p>
+    </div>
+    <div class="bg-gray-800 p-6 rounded-xl shadow-md">
+      <h3 class="text-white font-bold mb-2">GAD Capital</h3>
+      <p class="text-gray-400 text-sm">Investment platform with admin/owner/developer dashboards and premium design like Sharestates.</p>
+    </div>
+    <div class="bg-gray-800 p-6 rounded-xl shadow-md">
+      <h3 class="text-white font-bold mb-2">MidowStrets</h3>
+      <p class="text-gray-400 text-sm">Personal eCommerce site focused on men’s fashion with backend product management.</p>
+    </div>
+  </div>
+</section><!-- Poster Gallery --><section class="py-20 bg-gray-900 text-center" data-aos="fade-up">
   <h2 class="text-3xl font-bold text-indigo-400 mb-10">📸 Graphic Design Gallery</h2>
   <div id="lightgallery" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 px-6">
     <script>
       for (let i = 1; i <= 50; i++) {
         document.write(`
-          <a href="assets/poster${i}.png" class="rounded-md" data-lg-size="1406-1390">
-            <img src="assets/poster${i}.png" alt="Poster ${i}" class="rounded-md w-full h-auto" loading="lazy">
+          <a href="poster${i}.png" class="rounded-md" data-lg-size="1406-1390">
+            <img src="poster${i}.png" alt="Poster ${i}" class="rounded-md w-full h-auto" loading="lazy">
           </a>
         `);
       }
     </script>
   </div>
-</section>
-
-<!-- Testimonials -->
-<section class="bg-gray-800 py-16 px-6 text-center">
+</section><!-- Testimonials --><section class="bg-gray-800 py-16 px-6 text-center" data-aos="fade-up">
   <h2 class="text-3xl font-bold text-indigo-400 mb-10">🌟 What Clients Say</h2>
   <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
     <div class="bg-gray-900 p-6 rounded-xl">
@@ -93,25 +93,23 @@
       <h4 class="mt-4 font-bold text-white">— Sneha, Event Planner</h4>
     </div>
   </div>
-</section>
-
-<!-- Contact -->
-<section id="contact" class="py-20 text-center bg-gray-900">
+</section><!-- Contact --><section id="contact" class="py-20 text-center bg-gray-900" data-aos="fade-up">
   <h2 class="text-3xl font-bold text-indigo-400 mb-4">Let's Connect</h2>
   <p class="text-gray-300 mb-6">Get your custom website or design today</p>
   <a href="https://wa.me/918793727113" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full text-lg transition">
     WhatsApp: +91 8793727113
   </a>
-</section>
-
-<!-- Footer -->
-<footer class="text-center py-6 text-gray-500 bg-black">
+</section><!-- Footer --><footer class="text-center py-6 text-gray-500 bg-black">
   © 2025 MidowWeb Creater — Built with 💜
-</footer>
-
-<script>
+</footer><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script><script>
   lightGallery(document.getElementById('lightgallery'));
-</script>
-
-</body>
+</script><script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script><script>
+  AOS.init();
+  let counter = 0;
+  let interval = setInterval(() => {
+    if (counter >= 120) clearInterval(interval);
+    document.getElementById("counter").innerText = counter + "+";
+    counter++;
+  }, 30);
+</script></body>
 </html>
