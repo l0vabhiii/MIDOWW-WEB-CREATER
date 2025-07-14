@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MidowWeb Creater</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery.min.css" rel="stylesheet" />
   <style>
     html { scroll-behavior: smooth; }
-    .fadeInUp {
-      animation: fadeInUp 1.2s ease-in-out;
-    }
+    .fadeInUp { animation: fadeInUp 1.2s ease-in-out; }
     @keyframes fadeInUp {
       0% { opacity: 0; transform: translateY(30px); }
       100% { opacity: 1; transform: translateY(0); }
@@ -34,6 +34,7 @@
     Contact Now
   </a>
 </section>
+
 <!-- Video Section -->
 <section class="px-4 py-10 fadeInUp">
   <div class="max-w-5xl mx-auto">
@@ -61,22 +62,39 @@
       <p class="text-gray-400">Websites with backend integration possible</p>
     </div>
   </div>
-  </section>
-  <!-- Poster Gallery -->
+</section>
+
+<!-- Poster Gallery (Zoomable) -->
 <section class="py-20 bg-gray-900 text-center">
   <h2 class="text-3xl font-bold text-indigo-400 mb-10">📸 Graphic Design Gallery</h2>
-  <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 px-6">
+  <div id="lightgallery" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 px-6">
     <script>
       for (let i = 1; i <= 50; i++) {
         document.write(`
-          <div class="bg-gray-800 p-2 rounded-lg shadow-md hover:scale-105 transition">
+          <a href="assets/poster${i}.png" class="rounded-md" data-lg-size="1406-1390">
             <img src="assets/poster${i}.png" alt="Poster ${i}" class="rounded-md w-full h-auto" loading="lazy">
-          </div>
+          </a>
         `);
       }
     </script>
   </div>
 </section>
+
+<!-- Testimonials -->
+<section class="bg-gray-800 py-16 px-6 text-center">
+  <h2 class="text-3xl font-bold text-indigo-400 mb-10">🌟 What Clients Say</h2>
+  <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+    <div class="bg-gray-900 p-6 rounded-xl">
+      <p class="italic text-gray-300">“MidowWeb made my brand look premium! Highly recommend.”</p>
+      <h4 class="mt-4 font-bold text-white">— Raj, Clothing Brand Owner</h4>
+    </div>
+    <div class="bg-gray-900 p-6 rounded-xl">
+      <p class="italic text-gray-300">“From concept to live site, everything was handled professionally.”</p>
+      <h4 class="mt-4 font-bold text-white">— Sneha, Event Planner</h4>
+    </div>
+  </div>
+</section>
+
 <!-- Contact -->
 <section id="contact" class="py-20 text-center bg-gray-900">
   <h2 class="text-3xl font-bold text-indigo-400 mb-4">Let's Connect</h2>
@@ -90,6 +108,10 @@
 <footer class="text-center py-6 text-gray-500 bg-black">
   © 2025 MidowWeb Creater — Built with 💜
 </footer>
+
+<script>
+  lightGallery(document.getElementById('lightgallery'));
+</script>
 
 </body>
 </html>
