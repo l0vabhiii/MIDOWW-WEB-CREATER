@@ -3,212 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MidowWeb Creater | OG Portfolio</title>
+  <title>MidowWeb Creater</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <style>
     html { scroll-behavior: smooth; }
-    .glass {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+    .fadeInUp {
+      animation: fadeInUp 1.2s ease-in-out;
     }
-    .typing::after {
-      content: '|';
-      animation: blink 1s infinite;
-    }
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body class="bg-gray-900 text-white font-sans">
 
-<header class="fixed w-full z-50 bg-gray-900 bg-opacity-80 shadow-md">
+<!-- Header -->
+<header class="fixed w-full top-0 z-50 bg-gray-900 bg-opacity-90 shadow-lg">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="#home">
-      <img src="assets/logo.png" alt="MidowWeb Logo" class="h-10">
-    </a>
-    <nav class="space-x-4 text-sm hidden md:block">
-      <a href="#home" class="hover:text-indigo-400">Home</a>
-      <a href="#about" class="hover:text-indigo-400">About</a>
-      <a href="#services" class="hover:text-indigo-400">Services</a>
-      <a href="#projects" class="hover:text-indigo-400">Projects</a>
-      <a href="#posters" class="hover:text-indigo-400">Posters</a>
-      <a href="#testimonials" class="hover:text-indigo-400">Testimonials</a>
-      <a href="#contact" class="hover:text-indigo-400">Contact</a>
-    </nav>
+    <img src="assets/logo.png" alt="Logo" class="h-10">
+    <h1 class="text-xl font-bold text-indigo-400">MidowWeb Creater</h1>
   </div>
 </header>
 
-<section id="home" class="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-br from-indigo-900 to-black px-4 pt-24">
-  <div data-aos="fade-up">
-    <h1 class="text-4xl md:text-6xl font-extrabold mb-4">MidowWeb Creater</h1>
-    <p class="text-xl md:text-2xl text-indigo-300 mb-2">I am a <span id="typing-text" class="typing"></span></p>
-    <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-6 rounded-full text-lg transition mt-4">Let's Work Together</a>
-  </div>
+<!-- Hero Section -->
+<section class="pt-28 pb-10 text-center">
+  <h2 class="text-4xl font-extrabold mb-4 fadeInUp">Build Your Dream Portfolio</h2>
+  <p class="text-lg text-gray-300 fadeInUp">Web Design | Posters | Full Stack Development</p>
+  <a href="#contact" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full transition fadeInUp">
+    Contact Now
+  </a>
 </section>
-
-<section class="py-10 bg-black">
-  <div class="max-w-5xl mx-auto px-4" data-aos="zoom-in">
-    <video autoplay loop muted class="rounded-xl w-full shadow-lg">
-      <source src="assets/video.mp4" type="video/mp4">
+<!-- Video Section -->
+<section class="px-4 py-10 fadeInUp">
+  <div class="max-w-5xl mx-auto">
+    <video autoplay loop muted playsinline class="w-full rounded-xl shadow-2xl">
+      <source src="assets/promo-video.mp4" type="video/mp4">
+      Your browser does not support video playback.
     </video>
   </div>
 </section>
 
-<section id="about" class="py-20 bg-gray-800 px-6" data-aos="fade-up">
-  <div class="max-w-5xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-6 text-indigo-400">About Me</h2>
-    <p class="text-gray-300 max-w-3xl mx-auto">I'm a full stack developer and graphic designer. I build modern sites, posters, portfolios and help people grow online presence.</p>
-  </div>
-</section>
-<section id="benefits" class="py-20 bg-gray-800 px-6" data-aos="fade-up">
-  <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-10 text-indigo-400">Why Choose Me?</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
-        <h3 class="text-xl font-semibold text-white mb-2">✅ All-in-One Expert</h3>
-        <p class="text-gray-400">From websites to posters to branding — I handle it all professionally.</p>
-      </div>
-      <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
-        <h3 class="text-xl font-semibold text-white mb-2">🚀 Fast & Modern Work</h3>
-        <p class="text-gray-400">Super responsive designs, clean UI/UX, and fast delivery every time.</p>
-      </div>
-      <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
-        <h3 class="text-xl font-semibold text-white mb-2">💼 Portfolio Services</h3>
-        <p class="text-gray-400">Need your own portfolio? I build ready-to-upload GitHub or hosting-friendly code.</p>
-      </div>
-      <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
-        <h3 class="text-xl font-semibold text-white mb-2">🎯 Custom Designs</h3>
-        <p class="text-gray-400">Every client gets unique look and feel — zero copy paste work.</p>
-      </div>
-      <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
-        <h3 class="text-xl font-semibold text-white mb-2">📱 WhatsApp Support</h3>
-        <p class="text-gray-400">Direct support anytime on WhatsApp — no delays.</p>
-      </div>
-      <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
-        <h3 class="text-xl font-semibold text-white mb-2">🔥 High Graphics</h3>
-        <p class="text-gray-400">HD visuals, animated sliders, pro-level finish that attracts clients instantly.</p>
-      </div>
+<!-- Benefits Section -->
+<section class="py-16 bg-gray-800 px-4 text-center fadeInUp">
+  <h2 class="text-3xl font-bold text-indigo-400 mb-6">Why Choose Me?</h2>
+  <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    <div class="bg-gray-900 p-6 rounded-xl">
+      <h3 class="font-semibold mb-2 text-white">⚡ Fast & Modern</h3>
+      <p class="text-gray-400">Quick delivery with modern animations</p>
+    </div>
+    <div class="bg-gray-900 p-6 rounded-xl">
+      <h3 class="font-semibold mb-2 text-white">🎨 High Graphics</h3>
+      <p class="text-gray-400">Professional posters & promo visuals</p>
+    </div>
+    <div class="bg-gray-900 p-6 rounded-xl">
+      <h3 class="font-semibold mb-2 text-white">🛠️ Full Stack Ready</h3>
+      <p class="text-gray-400">Websites with backend integration possible</p>
     </div>
   </div>
-</section>
-<section id="services" class="py-20 bg-gray-900 px-6" data-aos="fade-up">
-  <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-10 text-indigo-400">Services</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="glass p-6 rounded-xl">
-        <h3 class="text-xl font-semibold mb-2">Web Development</h3>
-        <p class="text-gray-400">Clean, fast, responsive websites with modern UI/UX</p>
-      </div>
-      <div class="glass p-6 rounded-xl">
-        <h3 class="text-xl font-semibold mb-2">Graphic Design</h3>
-        <p class="text-gray-400">Banners, Posters, Insta Posts, Branding Designs</p>
-      </div>
-      <div class="glass p-6 rounded-xl">
-        <h3 class="text-xl font-semibold mb-2">Portfolio Services</h3>
-        <p class="text-gray-400">Custom portfolios for creators, freelancers & devs</p>
-      </div>
-    </div>
+  </section>
+  <!-- Poster Gallery -->
+<section class="py-20 bg-gray-900 text-center">
+  <h2 class="text-3xl font-bold text-indigo-400 mb-10">📸 Graphic Design Gallery</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 px-6">
+    <script>
+      for (let i = 1; i <= 50; i++) {
+        document.write(`
+          <div class="bg-gray-800 p-2 rounded-lg shadow-md hover:scale-105 transition">
+            <img src="assets/poster${i}.png" alt="Poster ${i}" class="rounded-md w-full h-auto" loading="lazy">
+          </div>
+        `);
+      }
+    </script>
   </div>
 </section>
-
-<section id="posters" class="py-20 bg-gray-800 px-6" data-aos="fade-up">
-  <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-10 text-indigo-400">Posters & Graphics</h2>
-    <div class="grid md:grid-cols-3 gap-6" id="poster-grid">
-      <div class="bg-gray-700 p-2 rounded-xl overflow-hidden">
-        <img src="assets/posters/midowweb_poster_1.png" class="rounded-xl" alt="MidowWeb Poster">
-        <p class="text-gray-300 mt-2">Freelance Services</p>
-      </div>
-    </div>
-  </div>
+<!-- Contact -->
+<section id="contact" class="py-20 text-center bg-gray-900">
+  <h2 class="text-3xl font-bold text-indigo-400 mb-4">Let's Connect</h2>
+  <p class="text-gray-300 mb-6">Get your custom website or design today</p>
+  <a href="https://wa.me/918793727113" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full text-lg transition">
+    WhatsApp: +91 8793727113
+  </a>
 </section>
 
-<section id="projects" class="py-20 bg-gray-900 px-6" data-aos="fade-up">
-  <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-10 text-indigo-400">Projects</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-gray-800 p-4 rounded-xl">
-        <h4 class="text-lg font-semibold">GAD Capital</h4>
-        <p class="text-sm text-gray-300">Investor-focused Firebase platform</p>
-      </div>
-      <div class="bg-gray-800 p-4 rounded-xl">
-        <h4 class="text-lg font-semibold">99,49 Store</h4>
-        <p class="text-sm text-gray-300">Low-price eCommerce frontend + backend</p>
-      </div>
-      <div class="bg-gray-800 p-4 rounded-xl">
-        <h4 class="text-lg font-semibold">Freelance Job Panel</h4>
-        <p class="text-sm text-gray-300">Role-based job & dashboard management</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="testimonials" class="py-20 bg-gray-800 px-6" data-aos="fade-up">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-10 text-indigo-400">Testimonials</h2>
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide bg-gray-700 p-6 rounded-xl text-white shadow">
-          <p class="italic">"MidowWeb built our site faster than we expected and with stunning results."</p>
-          <p class="text-sm mt-2 text-indigo-300">— Priya S, Startup Founder</p>
-        </div>
-        <div class="swiper-slide bg-gray-700 p-6 rounded-xl text-white shadow">
-          <p class="italic">"Great graphic designs and amazing responsiveness. Highly recommend."</p>
-          <p class="text-sm mt-2 text-indigo-300">— Aman T, Digital Creator</p>
-        </div>
-        <div class="swiper-slide bg-gray-700 p-6 rounded-xl text-white shadow">
-          <p class="italic">"My personal portfolio looks 🔥 now thanks to this guy."</p>
-          <p class="text-sm mt-2 text-indigo-300">— Rahul K, Freelancer</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="py-20 bg-gray-900 px-6" data-aos="fade-up">
-  <div class="max-w-xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-4 text-indigo-400">Contact Me</h2>
-    <p class="text-gray-300 mb-6">Need a portfolio or custom project? Let's connect.</p>
-    <a href="https://wa.me/918793727113" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full transition">Message Me on WhatsApp</a>
-  </div>
-</section>
-
-<footer class="text-center py-6 bg-black text-gray-500">
-  © 2025 MidowWeb Creater. Built with ❤️ using Tailwind CSS & Swiper.js
+<!-- Footer -->
+<footer class="text-center py-6 text-gray-500 bg-black">
+  © 2025 MidowWeb Creater — Built with 💜
 </footer>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    loop: true,
-    autoplay: { delay: 3000, disableOnInteraction: false },
-    slidesPerView: 1,
-    spaceBetween: 20,
-    breakpoints: { 768: { slidesPerView: 1 } }
-  });
-</script>
-<script>
-  const roles = ["Web Developer", "Graphic Designer", "UI/UX Expert", "Portfolio Builder"];
-  let i = 0, j = 0, current = '', isDeleting = false;
-  const el = document.getElementById("typing-text");
-  function type() {
-    if (!el) return;
-    if (isDeleting) current = roles[i].substring(0, j--);
-    else current = roles[i].substring(0, j++);
-    el.textContent = current;
-    if (!isDeleting && j === roles[i].length) { isDeleting = true; setTimeout(type, 1200); }
-    else if (isDeleting && j === 0) { isDeleting = false; i = (i + 1) % roles.length; setTimeout(type, 200); }
-    else setTimeout(type, isDeleting ? 50 : 100);
-  }
-  type();
-</script>
 
 </body>
 </html>
