@@ -1,115 +1,101 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MidowWeb Creater</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MidowWeb Creater – Poster Portfolio</title>
+  <link rel="icon" href="favicon.png" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; cursor: url('https://cdn-icons-png.flaticon.com/512/25/25694.png'), auto; }
-    a:hover { transform: scale(1.03); transition: 0.3s; }
+    body {
+      background-color: #0f172a;
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .poster img {
+      transition: transform 0.3s ease;
+    }
+    .poster img:hover {
+      transform: scale(1.05);
+    }
+    video {
+      border-radius: 1rem;
+      box-shadow: 0 0 20px #000000aa;
+    }
+    .fadeInUp {
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+    }
+    @keyframes fadeInUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
   </style>
 </head>
-<body class="bg-gray-900 text-white font-sans"><!-- Floating WhatsApp --><a href="https://wa.me/918793727113" target="_blank" class="fixed bottom-4 right-4 bg-green-500 p-3 rounded-full shadow-lg z-50">
-  <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" class="w-6 h-6" />
-</a><!-- Header --><header class="fixed w-full top-0 z-50 bg-gray-900 bg-opacity-90 shadow-lg">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <img src="logo.png" alt="Logo" class="h-10">
-    <h1 class="text-xl font-bold text-indigo-400">MidowWeb Creater</h1>
+<body class="p-4">
+
+  <!-- LOGO -->
+  <div class="flex justify-center mb-6">
+    <img src="logo.png" alt="Logo" class="w-28 h-28 object-contain" />
   </div>
-</header><!-- Hero Section --><section class="pt-28 pb-10 text-center" data-aos="fade-up">
-  <h2 class="text-4xl font-extrabold mb-4">Build Your Dream Portfolio</h2>
-  <p class="text-lg text-gray-300">Web Design | Posters | Full Stack Development</p>
-  <a href="#contact" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full transition">
-    Contact Now
-  </a>
-</section><!-- Video Section --><section class="px-4 py-10" data-aos="fade-up">
-  <div class="max-w-5xl mx-auto">
-    <video autoplay loop muted playsinline class="w-full rounded-xl shadow-2xl">
-      <source src="promo-video.mp4" type="video/mp4">
-      Your browser does not support video playback.
-    </video>
-  </div>
-</section><!-- Live Counter --><section class="text-center my-10" data-aos="fade-up">
-  <h2 class="text-3xl font-bold text-indigo-400">📊 Projects Delivered</h2>
-  <p class="text-6xl font-extrabold mt-4" id="counter">0+</p>
-</section><!-- Benefits Section --><section class="py-16 bg-gray-800 px-4 text-center" data-aos="fade-up">
-  <h2 class="text-3xl font-bold text-indigo-400 mb-6">Why Choose Me?</h2>
-  <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-    <div class="bg-gray-900 p-6 rounded-xl">
-      <h3 class="font-semibold mb-2 text-white">⚡ Fast & Modern</h3>
-      <p class="text-gray-400">Quick delivery with modern animations</p>
+
+  <!-- HEADER -->
+  <header class="text-center mb-10 fadeInUp">
+    <h1 class="text-4xl font-bold text-yellow-400">MidowWeb Creater</h1>
+    <p class="text-lg text-gray-300 mt-2">Creative Posters & Graphics Portfolio</p>
+  </header>
+
+  <!-- VIDEO SECTION -->
+  <section class="max-w-5xl mx-auto mb-12 fadeInUp">
+    <video src="video.mp4" autoplay muted loop class="w-full h-auto" playsinline></video>
+  </section>
+
+  <!-- WHY CHOOSE ME SECTION -->
+  <section class="text-center mb-16 fadeInUp">
+    <h2 class="text-3xl font-bold text-white mb-4">Why Choose MidowWeb Creater?</h2>
+    <p class="text-gray-300 mb-4">✅ Fast Delivery &nbsp; ✅ Premium Designs &nbsp; ✅ Affordable Pricing &nbsp; ✅ 100% Custom Work</p>
+    <p class="text-gray-400 max-w-xl mx-auto">From poster creation to full graphic branding – everything is handled with professionalism and perfection. Get eye-catching designs that help your business stand out!</p>
+  </section>
+
+  <!-- POSTER GALLERY -->
+  <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto fadeInUp">
+    <!-- Poster Blocks (Add till poster50.jpg) -->
+    <div class="poster"><img src="poster1.jpg" alt="Poster 1" class="rounded-xl shadow-lg w-full" /></div>
+    <div class="poster"><img src="poster2.jpg" alt="Poster 2" class="rounded-xl shadow-lg w-full" /></div>
+    <div class="poster"><img src="poster3.jpg" alt="Poster 3" class="rounded-xl shadow-lg w-full" /></div>
+    <div class="poster"><img src="poster4.jpg" alt="Poster 4" class="rounded-xl shadow-lg w-full" /></div>
+    <div class="poster"><img src="poster5.jpg" alt="Poster 5" class="rounded-xl shadow-lg w-full" /></div>
+    <div class="poster"><img src="poster6.jpg" alt="Poster 6" class="rounded-xl shadow-lg w-full" /></div>
+    <div class="poster"><img src="poster7.jpg" alt="Poster 7" class="rounded-xl shadow-lg w-full" /></div>
+    <div class="poster"><img src="poster8.jpg" alt="Poster 8" class="rounded-xl shadow-lg w-full" /></div>
+    <div class="poster"><img src="poster9.jpg" alt="Poster 9" class="rounded-xl shadow-lg w-full" /></div>
+    <div class="poster"><img src="poster10.jpg" alt="Poster 10" class="rounded-xl shadow-lg w-full" /></div>
+    <!-- Add up to poster50.jpg if needed -->
+  </section>
+
+  <!-- TESTIMONIAL SECTION -->
+  <section class="mt-20 mb-20 text-center fadeInUp">
+    <h2 class="text-3xl font-bold mb-6 text-yellow-400">What Clients Say</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div class="bg-gray-800 p-6 rounded-xl shadow-xl">
+        <p class="text-white">"Amazing quality work and super fast delivery! Highly recommended."</p>
+        <p class="text-yellow-300 mt-2 font-semibold">– Rahul, Clothing Brand</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-xl">
+        <p class="text-white">"Posters and banners turned out better than expected. Will order again!"</p>
+        <p class="text-yellow-300 mt-2 font-semibold">– Pooja, Cafe Owner</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-xl">
+        <p class="text-white">"Their designs helped boost my sales online. Great portfolio!"</p>
+        <p class="text-yellow-300 mt-2 font-semibold">– Imran, Online Seller</p>
+      </div>
     </div>
-    <div class="bg-gray-900 p-6 rounded-xl">
-      <h3 class="font-semibold mb-2 text-white">🎨 High Graphics</h3>
-      <p class="text-gray-400">Professional posters & promo visuals</p>
-    </div>
-    <div class="bg-gray-900 p-6 rounded-xl">
-      <h3 class="font-semibold mb-2 text-white">🛠️ Full Stack Ready</h3>
-      <p class="text-gray-400">Websites with backend integration possible</p>
-    </div>
-  </div>
-</section><!-- My Projects --><section class="py-20 bg-gray-900 text-center" data-aos="fade-up">
-  <h2 class="text-3xl font-bold text-indigo-400 mb-10">💼 My Recent Projects</h2>
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
-    <div class="bg-gray-800 p-6 rounded-xl shadow-md">
-      <h3 class="text-white font-bold mb-2">99,49 Store</h3>
-      <p class="text-gray-400 text-sm">E-commerce UI with product filters, dynamic backend, and ₹49-₹149 listing layout.</p>
-    </div>
-    <div class="bg-gray-800 p-6 rounded-xl shadow-md">
-      <h3 class="text-white font-bold mb-2">GAD Capital</h3>
-      <p class="text-gray-400 text-sm">Investment platform with admin/owner/developer dashboards and premium design like Sharestates.</p>
-    </div>
-    <div class="bg-gray-800 p-6 rounded-xl shadow-md">
-      <h3 class="text-white font-bold mb-2">MidowStrets</h3>
-      <p class="text-gray-400 text-sm">Personal eCommerce site focused on men’s fashion with backend product management.</p>
-    </div>
-  </div>
-</section><!-- Poster Gallery --><section class="py-20 bg-gray-900 text-center" data-aos="fade-up">
-  <h2 class="text-3xl font-bold text-indigo-400 mb-10">📸 Graphic Design Gallery</h2>
-  <div id="lightgallery" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 px-6">
-    <script>
-      for (let i = 1; i <= 50; i++) {
-        document.write(`
-          <a href="poster${i}.png" class="rounded-md" data-lg-size="1406-1390">
-            <img src="poster${i}.png" alt="Poster ${i}" class="rounded-md w-full h-auto" loading="lazy">
-          </a>
-        `);
-      }
-    </script>
-  </div>
-</section><!-- Testimonials --><section class="bg-gray-800 py-16 px-6 text-center" data-aos="fade-up">
-  <h2 class="text-3xl font-bold text-indigo-400 mb-10">🌟 What Clients Say</h2>
-  <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
-    <div class="bg-gray-900 p-6 rounded-xl">
-      <p class="italic text-gray-300">“MidowWeb made my brand look premium! Highly recommend.”</p>
-      <h4 class="mt-4 font-bold text-white">— Raj, Clothing Brand Owner</h4>
-    </div>
-    <div class="bg-gray-900 p-6 rounded-xl">
-      <p class="italic text-gray-300">“From concept to live site, everything was handled professionally.”</p>
-      <h4 class="mt-4 font-bold text-white">— Sneha, Event Planner</h4>
-    </div>
-  </div>
-</section><!-- Contact --><section id="contact" class="py-20 text-center bg-gray-900" data-aos="fade-up">
-  <h2 class="text-3xl font-bold text-indigo-400 mb-4">Let's Connect</h2>
-  <p class="text-gray-300 mb-6">Get your custom website or design today</p>
-  <a href="https://wa.me/918793727113" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full text-lg transition">
-    WhatsApp: +91 8793727113
-  </a>
-</section><!-- Footer --><footer class="text-center py-6 text-gray-500 bg-black">
-  © 2025 MidowWeb Creater — Built with 💜
-</footer><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script><script>
-  lightGallery(document.getElementById('lightgallery'));
-</script><script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script><script>
-  AOS.init();
-  let counter = 0;
-  let interval = setInterval(() => {
-    if (counter >= 120) clearInterval(interval);
-    document.getElementById("counter").innerText = counter + "+";
-    counter++;
-  }, 30);
-</script></body>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center mt-16 text-gray-400 text-sm">
+    © 2025 MidowWeb Creater. All rights reserved.
+  </footer>
+
+</body>
 </html>
