@@ -2,100 +2,178 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MidowWeb Creater – Poster Portfolio</title>
-  <link rel="icon" href="favicon.png" />
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MidowWeb Creator</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      background-color: #0f172a;
-      color: #ffffff;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
       font-family: 'Segoe UI', sans-serif;
     }
-    .poster img {
-      transition: transform 0.3s ease;
+    .fadeIn {
+      animation: fadeIn 1s ease-in;
     }
-    .poster img:hover {
-      transform: scale(1.05);
-    }
-    video {
-      border-radius: 1rem;
-      box-shadow: 0 0 20px #000000aa;
-    }
-    .fadeInUp {
-      animation: fadeInUp 1s ease forwards;
-      opacity: 0;
-    }
-    @keyframes fadeInUp {
-      from { transform: translateY(40px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
-<body class="p-4">
+<body class="text-white">
 
-  <!-- LOGO -->
-  <div class="flex justify-center mb-6">
-    <img src="logo.png" alt="Logo" class="w-28 h-28 object-contain" />
-  </div>
-
-  <!-- HEADER -->
-  <header class="text-center mb-10 fadeInUp">
-    <h1 class="text-4xl font-bold text-yellow-400">MidowWeb Creater</h1>
-    <p class="text-lg text-gray-300 mt-2">Creative Posters & Graphics Portfolio</p>
+  <!-- Header -->
+  <header class="flex justify-between items-center px-6 py-4 bg-black/60 shadow-md fixed w-full z-50">
+    <img src="logo.png" alt="logo" class="h-10">
+    <h1 class="text-2xl font-bold">Midow<span class="text-yellow-400">Web</span></h1>
+    <a href="https://wa.me/918793727113" class="bg-yellow-500 text-black px-4 py-2 rounded-lg hover:bg-yellow-400 transition">Hire Us</a>
   </header>
 
-  <!-- VIDEO SECTION -->
-  <section class="max-w-5xl mx-auto mb-12 fadeInUp">
-    <video src="video.mp4" autoplay muted loop class="w-full h-auto" playsinline></video>
-  </section>
+  <div class="pt-24 px-6 max-w-6xl mx-auto fadeIn">
 
-  <!-- WHY CHOOSE ME SECTION -->
-  <section class="text-center mb-16 fadeInUp">
-    <h2 class="text-3xl font-bold text-white mb-4">Why Choose MidowWeb Creater?</h2>
-    <p class="text-gray-300 mb-4">✅ Fast Delivery &nbsp; ✅ Premium Designs &nbsp; ✅ Affordable Pricing &nbsp; ✅ 100% Custom Work</p>
-    <p class="text-gray-400 max-w-xl mx-auto">From poster creation to full graphic branding – everything is handled with professionalism and perfection. Get eye-catching designs that help your business stand out!</p>
-  </section>
+    <!-- Hero -->
+    <section class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">We Build Brands That Stand Out</h2>
+      <p class="text-lg text-gray-300 mb-6">Websites, Posters, Logos, Reels – Everything your business needs to look powerful online.</p>
+      <video src="promo-video.mp4" autoplay muted loop class="mx-auto rounded-lg shadow-lg w-full max-w-xl mb-4"></video>
+    </section>
 
-  <!-- POSTER GALLERY -->
-  <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto fadeInUp">
-    <!-- Poster Blocks (Add till poster50.jpg) -->
-    <div class="poster"><img src="poster1.jpg" alt="Poster 1" class="rounded-xl shadow-lg w-full" /></div>
-    <div class="poster"><img src="poster2.jpg" alt="Poster 2" class="rounded-xl shadow-lg w-full" /></div>
-    <div class="poster"><img src="poster3.jpg" alt="Poster 3" class="rounded-xl shadow-lg w-full" /></div>
-    <div class="poster"><img src="poster4.jpg" alt="Poster 4" class="rounded-xl shadow-lg w-full" /></div>
-    <div class="poster"><img src="poster5.jpg" alt="Poster 5" class="rounded-xl shadow-lg w-full" /></div>
-    <div class="poster"><img src="poster6.jpg" alt="Poster 6" class="rounded-xl shadow-lg w-full" /></div>
-    <div class="poster"><img src="poster7.jpg" alt="Poster 7" class="rounded-xl shadow-lg w-full" /></div>
-    <div class="poster"><img src="poster8.jpg" alt="Poster 8" class="rounded-xl shadow-lg w-full" /></div>
-    <div class="poster"><img src="poster9.jpg" alt="Poster 9" class="rounded-xl shadow-lg w-full" /></div>
-    <div class="poster"><img src="poster10.jpg" alt="Poster 10" class="rounded-xl shadow-lg w-full" /></div>
-    <!-- Add up to poster50.jpg if needed -->
-  </section>
+    <!-- About -->
+    <section class="mb-16 text-center">
+      <h2 class="text-3xl font-bold mb-4">About MidowWeb</h2>
+      <p class="text-gray-300 max-w-2xl mx-auto">We’re a creative digital agency offering affordable yet professional web development and graphic designing. Our work speaks through visuals. Get noticed with MidowWeb.</p>
+    </section>
 
-  <!-- TESTIMONIAL SECTION -->
-  <section class="mt-20 mb-20 text-center fadeInUp">
-    <h2 class="text-3xl font-bold mb-6 text-yellow-400">What Clients Say</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-      <div class="bg-gray-800 p-6 rounded-xl shadow-xl">
-        <p class="text-white">"Amazing quality work and super fast delivery! Highly recommended."</p>
-        <p class="text-yellow-300 mt-2 font-semibold">– Rahul, Clothing Brand</p>
+    <!-- Benefits -->
+    <section class="mb-16 text-center">
+      <h2 class="text-3xl font-bold mb-6">Why Choose Us?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-800 p-6 rounded-lg">🚀 Fast Delivery</div>
+        <div class="bg-gray-800 p-6 rounded-lg">🎯 Brand-Focused Designs</div>
+        <div class="bg-gray-800 p-6 rounded-lg">💬 24x7 Support</div>
       </div>
-      <div class="bg-gray-800 p-6 rounded-xl shadow-xl">
-        <p class="text-white">"Posters and banners turned out better than expected. Will order again!"</p>
-        <p class="text-yellow-300 mt-2 font-semibold">– Pooja, Cafe Owner</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-xl shadow-xl">
-        <p class="text-white">"Their designs helped boost my sales online. Great portfolio!"</p>
-        <p class="text-yellow-300 mt-2 font-semibold">– Imran, Online Seller</p>
-      </div>
-    </div>
-  </section>
+    </section>
+    <!-- Services -->
+    <section class="mb-20 text-center">
+      <h2 class="text-3xl font-bold mb-6">Our Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-  <!-- FOOTER -->
-  <footer class="text-center mt-16 text-gray-400 text-sm">
-    © 2025 MidowWeb Creater. All rights reserved.
-  </footer>
+        <div class="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-yellow-400 transition">
+          <h3 class="text-xl font-semibold text-yellow-400 mb-2">Poster Designing</h3>
+          <p class="text-sm text-gray-300">Eye-catching posters for events, deals, and promotions. Ready within 24 hrs.</p>
+        </div>
 
+        <div class="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-yellow-400 transition">
+          <h3 class="text-xl font-semibold text-yellow-400 mb-2">Website Creation</h3>
+          <p class="text-sm text-gray-300">Mobile-friendly landing pages and websites built with speed and style.</p>
+        </div>
+
+        <div class="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-yellow-400 transition">
+          <h3 class="text-xl font-semibold text-yellow-400 mb-2">Graphic Design</h3>
+          <p class="text-sm text-gray-300">Logos, Brochures, Social banners, YouTube thumbnails, custom assets.</p>
+        </div>
+
+        <div class="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-yellow-400 transition">
+          <h3 class="text-xl font-semibold text-yellow-400 mb-2">YouTube Thumbnails</h3>
+          <p class="text-sm text-gray-300">Custom, clickable thumbnails to increase your YouTube views & branding.</p>
+        </div>
+
+        <div class="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-yellow-400 transition">
+          <h3 class="text-xl font-semibold text-yellow-400 mb-2">Social Media Creatives</h3>
+          <p class="text-sm text-gray-300">Story, reel BG, highlight covers, festival & offer posts for Instagram/Facebook.</p>
+        </div>
+
+        <div class="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-yellow-400 transition">
+          <h3 class="text-xl font-semibold text-yellow-400 mb-2">Custom Projects</h3>
+          <p class="text-sm text-gray-300">Have something in mind? We'll bring your idea to reality – with design + dev.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Poster Gallery -->
+    <section class="mb-20 text-center">
+      <h2 class="text-3xl font-bold mb-6">Our Posters</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+        <!-- You can copy-paste this div and change only the number to add more -->
+        <div><img src="poster1.jpg" alt="Poster 1" class="rounded-lg shadow-md w-full" /></div>
+        <div><img src="poster2.jpg" alt="Poster 2" class="rounded-lg shadow-md w-full" /></div>
+        <div><img src="poster3.jpg" alt="Poster 3" class="rounded-lg shadow-md w-full" /></div>
+
+        <!-- Add more up to poster50.jpg -->
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="mb-20 text-center">
+      <h2 class="text-3xl font-bold mb-6">Client Testimonials</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div class="bg-gray-800 p-6 rounded-xl">
+          <p class="text-sm">"MidowWeb ne mere saloon ke liye ekdum classy branding poster banaya. Fast & perfect!"</p>
+          <p class="mt-3 font-semibold text-yellow-400">– Riya Salon</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl">
+          <p class="text-sm">"Hamari second-hand bike showroom ke liye low budget me perfect digital poster mil gaya!"</p>
+          <p class="mt-3 font-semibold text-yellow-400">– Xtreme Bikes</p>
+        </div>
+      </div>
+    </section>
+    <!-- Pricing -->
+    <section class="mb-20 text-center">
+      <h2 class="text-3xl font-bold mb-6">Affordable Pricing</h2>
+      <p class="text-gray-300 mb-10">Professional work at desi rates. Choose your package:</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Starter -->
+        <div class="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-yellow-400 transition">
+          <h3 class="text-xl font-semibold text-yellow-400 mb-2">Starter</h3>
+          <p class="text-2xl font-bold text-white mb-4">₹499</p>
+          <ul class="text-gray-300 text-sm space-y-2">
+            <li>✅ 1 Poster</li>
+            <li>✅ Logo Customization</li>
+            <li>✅ Delivery: 24 hours</li>
+            <li>✅ WhatsApp Support</li>
+          </ul>
+        </div>
+
+        <!-- Professional -->
+        <div class="bg-yellow-400 p-6 rounded-xl text-black shadow-lg transform scale-105">
+          <h3 class="text-xl font-semibold mb-2">Professional</h3>
+          <p class="text-2xl font-bold mb-4">₹999</p>
+          <ul class="text-sm space-y-2">
+            <li>✅ 3 Posters + Logo</li>
+            <li>✅ Website (1 page)</li>
+            <li>✅ Banner + Reels BG</li>
+            <li>✅ Delivery: 2 Days</li>
+          </ul>
+        </div>
+
+        <!-- Business -->
+        <div class="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-yellow-400 transition">
+          <h3 class="text-xl font-semibold text-yellow-400 mb-2">Business</h3>
+          <p class="text-2xl font-bold text-white mb-4">₹1499</p>
+          <ul class="text-gray-300 text-sm space-y-2">
+            <li>✅ 5 Posters + Logo + Reels</li>
+            <li>✅ Full Website (5 Pages)</li>
+            <li>✅ YouTube Thumbnails</li>
+            <li>✅ Delivery: 3 Days</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/80 py-6 text-center text-gray-400 text-sm">
+      © 2025 MidowWeb Creater • All Rights Reserved • Made with ❤️ in India
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/918793727113" target="_blank" class="fixed bottom-6 right-6 z-50">
+      <img src="https://img.icons8.com/3d-fluency/48/whatsapp.png" class="w-12 h-12" alt="WhatsApp" />
+    </a>
+
+  </div> <!-- main container end -->
 </body>
 </html>
